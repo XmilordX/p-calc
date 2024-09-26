@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Percentuale</title>
+    <script>
+        function calcola() {
+            // Ottieni i valori dall'input dell'utente
+            const numero = parseFloat(document.getElementById('numero').value);
+            const percentuale = parseFloat(document.getElementById('percentuale').value);
 
+            // Calcola il 100% e la percentuale rimanente
+            const centoPercento = numero / (percentuale / 100);
+            const percentualeRimanente = centoPercento * (100 - percentuale) / 100;
+
+            // Formatta i risultati
+            const risultato = `Il numero che corrisponde al 100% è: €${centoPercento.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}\n`;
+            const risultatoRimanente = `Il numero che corrisponde al ${100 - percentuale}% è: €${percentualeRimanente.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+            // Mostra i risultati nella pagina
+            document.getElementById('risultato').innerText = risultato + risultatoRimanente;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcola il Valore Percentuale</h1>
+    <label for="numero">Numero:</label>
+    <input type="number" id="numero" required>
+    <br>
+    <label for="percentuale">Percentuale:</label>
+    <input type="number" id="percentuale" required>
+    <br>
+    <button onclick="calcola()">Calcola</button>
+    <pre id="risultato"></pre>
+</body>
+</html>
