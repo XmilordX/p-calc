@@ -17,7 +17,7 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-label {
+.label {
     display: block;
     margin-bottom: 8px;
 }
@@ -55,4 +55,7 @@ pre {
 }
 .risultato {
     font-weight: bold; /* Grassetto per i numeri */
+}
+.risultato-centrato {
+    text-align: center; /* Centra il testo */
 }
