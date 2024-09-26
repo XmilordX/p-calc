@@ -1,24 +1,94 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png">
-    <title>Seconda Pagina</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="seconda_pagina.html">Seconda Pagina</a></li>
-        </ul>
-    </nav>
+/* Stile generali per il corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3; /* Colore di sfondo più leggero */
+    color: #333; /* Colore del testo */
+}
 
-    <div class="container">
-        <h1>Benvenuto nella Seconda Pagina</h1>
-        <p>Qui puoi aggiungere contenuti diversi o ulteriori funzionalità.</p>
-        <a href="index.html">Torna alla prima pagina</a>
-    </div>
-</body>
-</html>
+/* Stile per il contenitore principale */
+.container {
+    max-width: 800px; /* Larghezza massima */
+    margin: auto;
+    padding: 20px;
+    background-color: white; /* Colore di sfondo del contenitore */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per il contenitore */
+    border-radius: 8px; /* Bordo arrotondato */
+}
+
+/* Stile per il menù di navigazione */
+nav {
+    background-color: #5c6bc0; /* Colore di sfondo del menù */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti di elenco */
+    padding: 0; /* Rimuove il padding */
+    display: flex; /* Flexbox per il menù */
+    justify-content: center; /* Centro gli elementi del menù */
+}
+
+nav ul li {
+    margin: 0 15px; /* Spazio tra gli elementi */
+}
+
+nav ul li a {
+    color: white; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-weight: bold; /* Testo in grassetto */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea quando si passa sopra con il mouse */
+}
+
+/* Stile per le intestazioni */
+h1, h2 {
+    color: #5c6bc0; /* Colore del testo delle intestazioni */
+    text-align: center; /* Allinea al centro */
+}
+
+/* Stile per i paragrafi */
+p {
+    text-align: center; /* Allinea al centro */
+    font-size: 18px; /* Dimensione del testo */
+}
+
+/* Stile per i gruppi di input */
+.input-group {
+    display: flex;
+    justify-content: center; /* Centro gli input */
+    margin: 10px 0; /* Margine verticale */
+}
+
+/* Stile per gli input e i pulsanti */
+input[type="number"], button {
+    padding: 10px; /* Padding per gli input */
+    margin: 5px; /* Margine per gli input */
+    font-size: 16px; /* Dimensione del testo */
+    border: 2px solid #5c6bc0; /* Bordo degli input */
+    border-radius: 4px; /* Bordo arrotondato */
+}
+
+button {
+    background-color: #5cb85c; /* Colore di sfondo del pulsante */
+    color: white; /* Colore del testo del pulsante */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio sopra */
+    transition: background-color 0.3s; /* Effetto di transizione */
+}
+
+button:hover {
+    background-color: #4cae4c; /* Colore di sfondo al passaggio sopra */
+}
+
+/* Stile per i risultati */
+#risultatoSomma, #risultatoSottrazione, #risultatoMoltiplicazione, #risultatoDivisione, #risultatoPercentuale {
+    text-align: center; /* Allinea al centro */
+    font-size: 20px; /* Dimensione del testo dei risultati */
+    margin-top: 10px; /* Margine superiore */
+    color: #333; /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+}
