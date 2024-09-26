@@ -3,62 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png">
-    <title>Calcolatrice</title>
+    <title>Calcolo Operazioni</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Favicon -->
+    <link rel="stylesheet" href="styles.css"> <!-- Collega il CSS -->
+    <script>
+        function calcolaPercentuale() {
+            const numero = parseFloat(document.getElementById('numero-perc').value);
+            const percentuale = parseFloat(document.getElementById('percentuale').value);
+            const risultato = (numero * percentuale) / 100;
+
+            const messaggioRisultato = `Il ${percentuale}% di ${numero} è: <span class="risultato">€${risultato.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+            document.getElementById('risultato-perc').innerHTML = messaggioRisultato; // Modificato per usare innerHTML
+        }
+
+        function calcolaSomma() {
+            const num1 = parseFloat(document.getElementById('num1-somma').value);
+            const num2 = parseFloat(document.getElementById('num2-somma').value);
+            const risultato = num1 + num2;
+            document.getElementById('risultato-somma').innerHTML = `La somma di ${num1} e ${num2} è: <span class="risultato">${risultato}</span>`;
+        }
+
+        function calcolaSottrazione() {
+            const num1 = parseFloat(document.getElementById('num1-sottrazione').value);
+            const num2 = parseFloat(document.getElementById('num2-sottrazione').value);
+            const risultato = num1 - num2;
+            document.getElementById('risultato-sottrazione').innerHTML = `La sottrazione di ${num1} e ${num2} è: <span class="risultato">${risultato}</span>`;
+        }
+
+        function calcolaMoltiplicazione() {
+            const num1 = parseFloat(document.getElementById('num1-moltiplicazione').value);
+            const num2 = parseFloat(document.getElementById('num2-moltiplicazione').value);
+            const risultato = num1 * num2;
+            document.getElementById('risultato-moltiplicazione').innerHTML = `La moltiplicazione di ${num1} e ${num2} è: <span class="risultato">${risultato}</span>`;
+        }
+
+        function calcolaDivisione() {
+            const num1 = parseFloat(document.getElementById('num1-divisione').value);
+            const num2 = parseFloat(document.getElementById('num2-divisione').value);
+            const risultato = num2 !== 0 ? num1 / num2 : 'Errore: Divisione per zero';
+            document.getElementById('risultato-divisione').innerHTML = `La divisione di ${num1} e ${num2} è: <span class="risultato">${risultato}</span>`;
+        }
+    </script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="seconda_pagina.html">Seconda Pagina</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <h1>Calcolatrice</h1>
-        
+        <h1>Calcolo Operazioni</h1>
+
+        <!-- Calcolo Somma -->
         <h2>Calcola la somma</h2>
-        <div class="input-group">
-            <input type="number" id="sommaNum1" placeholder="Primo numero">
-            <input type="number" id="sommaNum2" placeholder="Secondo numero">
+        <div class="input-row">
+            <input type="number" id="num1-somma" placeholder="Numero 1" required>
+            <span>+</span>
+            <input type="number" id="num2-somma" placeholder="Numero 2" required>
+            <button onclick="calcolaSomma()">Calcola</button>
         </div>
-        <button onclick="calcolaSomma()">Calcola</button>
-        <p id="risultatoSomma"></p>
+        <pre id="risultato-somma" class="risultato-centrato"></pre>
 
+        <!-- Calcolo Sottrazione -->
         <h2>Calcola la sottrazione</h2>
-        <div class="input-group">
-            <input type="number" id="sottrazioneNum1" placeholder="Primo numero">
-            <input type="number" id="sottrazioneNum2" placeholder="Secondo numero">
+        <div class="input-row">
+            <input type="number" id="num1-sottrazione" placeholder="Numero 1" required>
+            <span>-</span>
+            <input type="number" id="num2-sottrazione" placeholder="Numero 2" required>
+            <button onclick="calcolaSottrazione()">Calcola</button>
         </div>
-        <button onclick="calcolaSottrazione()">Calcola</button>
-        <p id="risultatoSottrazione"></p>
+        <pre id="risultato-sottrazione" class="risultato-centrato"></pre>
 
+        <!-- Calcolo Moltiplicazione -->
         <h2>Calcola la moltiplicazione</h2>
-        <div class="input-group">
-            <input type="number" id="moltiplicazioneNum1" placeholder="Primo numero">
-            <input type="number" id="moltiplicazioneNum2" placeholder="Secondo numero">
+        <div class="input-row">
+            <input type="number" id="num1-moltiplicazione" placeholder="Numero 1" required>
+            <span>*</span>
+            <input type="number" id="num2-moltiplicazione" placeholder="Numero 2" required>
+            <button onclick="calcolaMoltiplicazione()">Calcola</button>
         </div>
-        <button onclick="calcolaMoltiplicazione()">Calcola</button>
-        <p id="risultatoMoltiplicazione"></p>
+        <pre id="risultato-moltiplicazione" class="risultato-centrato"></pre>
 
+        <!-- Calcolo Divisione -->
         <h2>Calcola la divisione</h2>
-        <div class="input-group">
-            <input type="number" id="divisioneNum1" placeholder="Primo numero">
-            <input type="number" id="divisioneNum2" placeholder="Secondo numero">
+        <div class="input-row">
+            <input type="number" id="num1-divisione" placeholder="Numero 1" required>
+            <span>/</span>
+            <input type="number" id="num2-divisione" placeholder="Numero 2" required>
+            <button onclick="calcolaDivisione()">Calcola</button>
         </div>
-        <button onclick="calcolaDivisione()">Calcola</button>
-        <p id="risultatoDivisione"></p>
+        <pre id="risultato-divisione" class="risultato-centrato"></pre>
 
+        <!-- Calcolo Percentuale -->
         <h2>Calcola la percentuale</h2>
-        <div class="input-group">
-            <input type="number" id="percentualeNum" placeholder="Numero">
-            <input type="number" id="percentualeVal" placeholder="Percentuale">
+        <div class="input-row">
+            <label for="numero-perc" style="margin-right: 10px;">Il</label>
+            <input type="number" id="numero-perc" placeholder="Numero" required>
+            <label for="percentuale" style="margin: 0 5px;">% di</label>
+            <input type="number" id="percentuale" placeholder="Percentuale" required>
+            <span>è</span>
+            <button style="margin-left: 10px;" onclick="calcolaPercentuale()">Calcola</button>
         </div>
-        <button onclick="calcolaPercentuale()">Calcola</button>
-        <p id="risultatoPercentuale"></p>
+        <pre id="risultato-perc" class="risultato-centrato"></pre>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
