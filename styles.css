@@ -9,6 +9,10 @@ h1 {
     color: #4CAF50;
     text-align: center;
 }
+h2 {
+    color: #333;
+    margin-top: 20px; /* Spazio sopra i titoli delle operazioni */
+}
 .container {
     max-width: 600px;
     margin: auto;
