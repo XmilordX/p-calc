@@ -49,18 +49,8 @@
     <div class="container">
         <h1>Calcolo Operazioni</h1>
 
-        <!-- Calcolo Percentuale -->
-        <div class="input-row">
-            <label for="numero-perc" style="margin-right: 10px;">Il</label>
-            <input type="number" id="numero-perc" placeholder="Numero" required>
-            <label for="percentuale" style="margin: 0 5px;">% di</label>
-            <input type="number" id="percentuale" placeholder="Percentuale" required>
-            <span>è</span>
-            <button style="margin-left: 10px;" onclick="calcolaPercentuale()">Calcola</button>
-        </div>
-        <pre id="risultato-perc" class="risultato-centrato"></pre>
-
         <!-- Calcolo Somma -->
+        <h2>Calcola la somma</h2>
         <div class="input-row">
             <input type="number" id="num1-somma" placeholder="Numero 1" required>
             <span>+</span>
@@ -70,6 +60,7 @@
         <pre id="risultato-somma" class="risultato-centrato"></pre>
 
         <!-- Calcolo Sottrazione -->
+        <h2>Calcola la sottrazione</h2>
         <div class="input-row">
             <input type="number" id="num1-sottrazione" placeholder="Numero 1" required>
             <span>-</span>
@@ -79,6 +70,7 @@
         <pre id="risultato-sottrazione" class="risultato-centrato"></pre>
 
         <!-- Calcolo Moltiplicazione -->
+        <h2>Calcola la moltiplicazione</h2>
         <div class="input-row">
             <input type="number" id="num1-moltiplicazione" placeholder="Numero 1" required>
             <span>*</span>
@@ -88,6 +80,7 @@
         <pre id="risultato-moltiplicazione" class="risultato-centrato"></pre>
 
         <!-- Calcolo Divisione -->
+        <h2>Calcola la divisione</h2>
         <div class="input-row">
             <input type="number" id="num1-divisione" placeholder="Numero 1" required>
             <span>/</span>
@@ -95,6 +88,18 @@
             <button onclick="calcolaDivisione()">Calcola</button>
         </div>
         <pre id="risultato-divisione" class="risultato-centrato"></pre>
+
+        <!-- Calcolo Percentuale -->
+        <h2>Calcola la percentuale</h2>
+        <div class="input-row">
+            <label for="numero-perc" style="margin-right: 10px;">Il</label>
+            <input type="number" id="numero-perc" placeholder="Numero" required>
+            <label for="percentuale" style="margin: 0 5px;">% di</label>
+            <input type="number" id="percentuale" placeholder="Percentuale" required>
+            <span>è</span>
+            <button style="margin-left: 10px;" onclick="calcolaPercentuale()">Calcola</button>
+        </div>
+        <pre id="risultato-perc" class="risultato-centrato"></pre>
     </div>
 </body>
 </html>
