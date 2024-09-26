@@ -1,94 +1,66 @@
-/* Stile generali per il corpo */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    background-color: #eef2f3; /* Colore di sfondo più leggero */
-    color: #333; /* Colore del testo */
-}
-
-/* Stile per il contenitore principale */
-.container {
-    max-width: 800px; /* Larghezza massima */
-    margin: auto;
     padding: 20px;
-    background-color: white; /* Colore di sfondo del contenitore */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per il contenitore */
-    border-radius: 8px; /* Bordo arrotondato */
+    color: #333;
 }
-
-/* Stile per il menù di navigazione */
-nav {
-    background-color: #5c6bc0; /* Colore di sfondo del menù */
-    padding: 10px;
+h1 {
+    color: #4CAF50;
+    text-align: center;
 }
-
-nav ul {
-    list-style-type: none; /* Rimuove i punti di elenco */
-    padding: 0; /* Rimuove il padding */
-    display: flex; /* Flexbox per il menù */
-    justify-content: center; /* Centro gli elementi del menù */
+h2 {
+    color: #333;
+    margin-top: 20px; /* Spazio sopra i titoli delle operazioni */
 }
-
-nav ul li {
-    margin: 0 15px; /* Spazio tra gli elementi */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-nav ul li a {
-    color: white; /* Colore del testo */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    font-weight: bold; /* Testo in grassetto */
+.label {
+    display: block;
+    margin-bottom: 8px;
 }
-
-nav ul li a:hover {
-    text-decoration: underline; /* Sottolinea quando si passa sopra con il mouse */
-}
-
-/* Stile per le intestazioni */
-h1, h2 {
-    color: #5c6bc0; /* Colore del testo delle intestazioni */
-    text-align: center; /* Allinea al centro */
-}
-
-/* Stile per i paragrafi */
-p {
-    text-align: center; /* Allinea al centro */
-    font-size: 18px; /* Dimensione del testo */
-}
-
-/* Stile per i gruppi di input */
-.input-group {
+.input-row {
     display: flex;
-    justify-content: center; /* Centro gli input */
-    margin: 10px 0; /* Margine verticale */
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px; /* Aggiunto spazio tra le righe di input */
 }
-
-/* Stile per gli input e i pulsanti */
-input[type="number"], button {
-    padding: 10px; /* Padding per gli input */
-    margin: 5px; /* Margine per gli input */
-    font-size: 16px; /* Dimensione del testo */
-    border: 2px solid #5c6bc0; /* Bordo degli input */
-    border-radius: 4px; /* Bordo arrotondato */
+input[type="number"] {
+    width: 20%; /* Mantieni la larghezza */
+    padding: 10px;
+    margin: 0 5px; /* Spazio tra gli input */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px; /* Dimensione del carattere */
 }
-
 button {
-    background-color: #5cb85c; /* Colore di sfondo del pulsante */
-    color: white; /* Colore del testo del pulsante */
-    border: none; /* Rimuove il bordo */
-    cursor: pointer; /* Cambia il cursore al passaggio sopra */
-    transition: background-color 0.3s; /* Effetto di transizione */
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Dimensione del carattere */
 }
-
 button:hover {
-    background-color: #4cae4c; /* Colore di sfondo al passaggio sopra */
+    background-color: #45a049;
 }
-
-/* Stile per i risultati */
-#risultatoSomma, #risultatoSottrazione, #risultatoMoltiplicazione, #risultatoDivisione, #risultatoPercentuale {
-    text-align: center; /* Allinea al centro */
-    font-size: 20px; /* Dimensione del testo dei risultati */
-    margin-top: 10px; /* Margine superiore */
-    color: #333; /* Colore del testo */
-    font-weight: bold; /* Testo in grassetto */
+pre {
+    background: #e7f4e4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 16px; /* Dimensione del carattere */
+}
+.risultato {
+    font-weight: bold; /* Grassetto per i numeri */
+}
+.risultato-centrato {
+    text-align: center; /* Centra il testo */
 }
