@@ -1,66 +1,70 @@
+/* Stile generali per il corpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
-    color: #333;
+    padding: 0;
+    background-color: #f4f4f4; /* Colore di sfondo */
 }
-h1 {
-    color: #4CAF50;
-    text-align: center;
-}
-h2 {
-    color: #333;
-    margin-top: 20px; /* Spazio sopra i titoli delle operazioni */
-}
+
+/* Stile per il contenitore principale */
 .container {
-    max-width: 600px;
+    width: 80%;
     margin: auto;
-    background: #fff;
+    overflow: hidden;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.label {
-    display: block;
-    margin-bottom: 8px;
-}
-.input-row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 15px; /* Aggiunto spazio tra le righe di input */
-}
-input[type="number"] {
-    width: 20%; /* Mantieni la larghezza */
+
+/* Stile per il menù di navigazione */
+nav {
+    background-color: #333; /* Colore di sfondo del menù */
     padding: 10px;
-    margin: 0 5px; /* Spazio tra gli input */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px; /* Dimensione del carattere */
 }
+
+nav ul {
+    list-style-type: none; /* Rimuove i punti di elenco */
+    padding: 0; /* Rimuove il padding */
+}
+
+nav ul li {
+    display: inline; /* Mostra gli elementi in linea */
+    margin-right: 15px; /* Spazio tra gli elementi */
+}
+
+nav ul li a {
+    color: white; /* Colore del testo */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sottolinea quando si passa sopra con il mouse */
+}
+
+/* Stile per le intestazioni */
+h1, h2 {
+    color: #333; /* Colore del testo delle intestazioni */
+    text-align: center; /* Allinea al centro */
+}
+
+/* Stile per i paragrafi */
+p {
+    text-align: center; /* Allinea al centro */
+    font-size: 18px; /* Dimensione del testo */
+}
+
+/* Stile per gli input e i pulsanti */
+input[type="number"], button {
+    padding: 10px; /* Padding per gli input */
+    margin: 10px; /* Margine per gli input */
+    font-size: 16px; /* Dimensione del testo */
+}
+
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px; /* Dimensione del carattere */
+    background-color: #5cb85c; /* Colore di sfondo del pulsante */
+    color: white; /* Colore del testo del pulsante */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio sopra */
 }
+
 button:hover {
-    background-color: #45a049;
-}
-pre {
-    background: #e7f4e4;
-    padding: 10px;
-    border-radius: 4px;
-    overflow-x: auto;
-    font-size: 16px; /* Dimensione del carattere */
-}
-.risultato {
-    font-weight: bold; /* Grassetto per i numeri */
-}
-.risultato-centrato {
-    text-align: center; /* Centra il testo */
+    background-color: #4cae4c; /* Colore di sfondo al passaggio sopra */
 }
