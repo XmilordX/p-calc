@@ -62,4 +62,27 @@
     </style>
     <script>
         function calcola() {
-            const numero = parseFloat(document.getElementB
+            const numero = parseFloat(document.getElementById('numero').value);
+            const percentuale = parseFloat(document.getElementById('percentuale').value);
+            const centoPercento = numero / (percentuale / 100);
+            const percentualeRimanente = centoPercento * (100 - percentuale) / 100;
+
+            const risultato = `Il numero che corrisponde al 100% è: <span class="risultato">€${centoPercento.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>\n`;
+            const risultatoRimanente = `Il numero che corrisponde al <span class="risultato">${100 - percentuale}%</span> è: <span class="risultato">€${percentualeRimanente.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+
+            document.getElementById('risultato').innerHTML = risultato + risultatoRimanente; // Modificato per usare innerHTML
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calcola il Valore Percentuale</h1>
+        <label for="numero">Numero:</label>
+        <input type="number" id="numero" required>
+        <label for="percentuale">Percentuale:</label>
+        <input type="number" id="percentuale" required>
+        <button onclick="calcola()">Calcola</button>
+        <pre id="risultato"></pre>
+    </div>
+</body>
+</html>
